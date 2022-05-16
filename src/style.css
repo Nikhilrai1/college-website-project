@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* ------------header style----------- */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    height: 90px;
+    width: 100%;
+    padding: 10px;
+}
+
+.logo {
+    width: 250px;
+    padding: 10px;
+}
+
+.logo img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.nav {
+    height: 100%;
+    width: calc(100% - 250px);
+    display: flex;
+    align-items: center;
+}
+
+.nav .navItems {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 15px;
+    width: 100%;
+    background-color: rgb(235, 229, 229);
+    border-radius: 10px;
+}
+
+.navItems .navItem {
+    background-color: rgb(48, 212, 56);
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: 0.5s all;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+}
+
+.navItem .icon {
+    margin-left: 3px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+
+.navIcon {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.navItems .navItem:hover {
+    background-color: rgb(185, 56, 245);
+}
+
+.hoverItems {
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 30px;
+    left: 2px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    border-radius: 10px;
+    text-align: left;
+    width: 220px;
+    border: 0.5px solid gray;
+    z-index: 999;
+}
+
+.hoverItems li {
+    padding: 10px;
+    width: 100%;
+}
+
+.hoverItem {
+    color: black;
+}
+
+.hoverItems li:hover .hoverItem {
+    color: goldenrod;
+}
+
+.navItems .navItem:hover .hoverItems {
+    display: flex;
+}
+
+/* -----------featured--------------- */
+.wrapper,
+.homeContainer {
+    height: calc(100vh - 90px);
+    width: 100%;
+}
+
+.featured {
+    height: 90%;
+    width: 100%;
+    background-image: url(/asset//featured2.jpg);
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.featuredInfo {
+    padding: 20px;
+}
+
+.featured .top {
+    color: whitesmoke;
+    text-shadow: 6px 20px 50px black;
+}
+
+.featured .top h1 {
+    font-size: 70px;
+    font-weight: 600;
+}
+
+.featured .bottom {
+    text-align: center;
+    margin-top: 10px;
+}
+
+button {
+    height: 50px;
+    width: 150px;
+    border-radius: 50px;
+    border: none;
+    background-color: goldenrod;
+    color: whitesmoke;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.infoContainer {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.infoContainer .title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: rgb(212, 0, 255);
+    font-weight: 600;
+    text-shadow: 20px 2px 30px black;
+}
+
+.infoContainer .infoItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.infoItem .leftItem,
+.infoItem .rightItem {
+    flex: 1;
+    height: 100%;
+    width: 50%;
+}
+
+.infoItem .leftItem img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.rightItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.rightItem p {
+    line-height: 30px;
+    font-size: 20px;
+}
+
+
+.readButton {
+    background-color: orange;
+}
+
+.tourButton {
+    background-color: green;
+}
+
+.visitButton {
+    background-color: goldenrod;
+}
+
+button:hover {
+    background-color: gold;
+}
+
+/* --------footer--------- */
+footer {
+    padding: 15.5px;
+    background-color: rgb(210, 143, 212);
+}
+
+footer,
+.left,
+.right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.left,
+.right {
+    flex: 1;
+}
+
+.right {
+    justify-content: space-around;
+    font-size: 30px;
+}
+
+.right i {
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+.right i:hover {
+    transform: scale(1.5);
+}
+
+.middle {
+    flex: 2;
+}
+
+.middle p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.left {
+    justify-content: space-evenly;
+}
+
